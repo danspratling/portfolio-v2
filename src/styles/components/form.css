@@ -1,0 +1,21 @@
+form input {
+  @apply flex-auto w-full bg-neutral-muted rounded px-4 py-3 mr-4;
+}
+
+@media (min-width: theme('screens.md')) {
+  form input {
+    @apply w-auto;
+  }
+}
+
+form button {
+  @apply btn bg-secondary px-8 py-3 rounded;
+}
+
+form button:hover {
+  @apply shadow-lg -translate-y-1;
+}
+
+.formkit-alert {
+  @apply text-xl py-4;
+}

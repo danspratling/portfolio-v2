@@ -1,0 +1,88 @@
+code[class*='language-'],
+pre[class*='prismjs'] {
+  @apply text-inverted-muted;
+}
+
+pre[class*='prismjs'],
+:not(pre) > code[class*='language-'] {
+  @apply bg-neutral-muted;
+}
+
+/* Code blocks */
+pre[class*='prismjs'] {
+  @apply py-4 px-6 my-8 overflow-auto rounded text-sm;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  @apply px-2 py-1 rounded whitespace-normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-inverted-muted;
+}
+
+.token.function-variable,
+.token.function {
+  @apply text-code-1;
+}
+
+.token.parameter {
+  @apply text-code-2;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  @apply text-code-1;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-inverted-muted;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  @apply text-inverted-muted;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-code-3;
+}
+
+.token.regex,
+.token.important {
+  @apply text-code-3;
+}
+
+.token.important,
+.token.bold {
+  @apply font-semibold;
+}
+.token.italic {
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.deleted {
+  @apply text-code-4;
+}

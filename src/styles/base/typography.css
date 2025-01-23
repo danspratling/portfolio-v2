@@ -1,0 +1,98 @@
+body {
+  @apply text-inverted;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.overline,
+.subtitle {
+  @apply font-semibold leading-tight tracking-tight;
+}
+
+h1 {
+  @apply text-4xl;
+}
+@media (min-width: theme('screens.sm')) {
+  h1 {
+    @apply text-5xl;
+  }
+}
+@media (min-width: theme('screens.md')) {
+  h1 {
+    @apply text-6xl;
+  }
+}
+
+h2 {
+  @apply text-3xl;
+}
+@media (min-width: theme('screens.sm')) {
+  h2 {
+    @apply text-4xl;
+  }
+}
+@media (min-width: theme('screens.md')) {
+  h2 {
+    @apply text-5xl;
+  }
+}
+
+h3 {
+  @apply text-2xl;
+}
+@media (min-width: theme('screens.sm')) {
+  h3 {
+    @apply text-3xl;
+  }
+}
+
+h4 {
+  @apply text-xl;
+}
+@media (min-width: theme('screens.sm')) {
+  h4 {
+    @apply text-2xl;
+  }
+}
+
+.overline {
+  @apply uppercase text-sm tracking-wide;
+}
+
+.subtitle {
+  @apply text-lg;
+}
+
+.small {
+  @apply text-sm;
+}
+
+a {
+  @apply relative text-accent transition-all duration-200;
+}
+
+a:hover,
+a:focus {
+  @apply underline;
+}
+
+ul,
+ol {
+  @apply mb-4 pl-6;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+li {
+  @apply mb-2;
+}

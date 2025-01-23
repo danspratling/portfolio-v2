@@ -1,0 +1,15 @@
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+img.__lazy {
+  opacity: 0;
+}
+
+img[src]:not('__lazy') {
+  opacity: 1;
+}

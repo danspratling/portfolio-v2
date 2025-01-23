@@ -1,0 +1,31 @@
+---
+import "#/src/styles/index.css"
+import { Footer } from "#/src/components/Footer"
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='generator' content={Astro.generator} />
+    <!-- <BaseHead title={title} /> -->
+  </head>
+  <body class='bg-gray-950 text-gray-50'>
+    <!-- Nav -->
+    <slot />
+    <Footer
+      title='Dan Spratling'
+      description='I create beautiful websites your users will love. I work with you from start to finish to make sure your goals are reached and your users are happy.'
+      links={[
+        { children: "Home", href: "/" },
+        { children: "About", href: "/about" },
+        { children: "Blog", href: "/blog" },
+        { children: "Projects", href: "skyward.digital/projects" },
+        { children: "Contact", href: "/contact" },
+        { children: "Resume/CV", href: "/cv" },
+      ]}
+    />
+  </body>
+</html>

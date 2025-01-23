@@ -1,16 +1,93 @@
 ---
+import { Hero } from "../components/Hero/Simple"
+import { Features } from "../components/Features"
+import { CardCta } from "../components/CardCta"
+import { TestimonialGrid } from "../components/Testimonials"
+import { Logos } from "../components/Logos"
+import Layout from "#/src/components/Layout.astro"
 
+// What I do
+const content = {
+  features: {
+    title: "Everything you need for a perfect website",
+    features: [
+      { title: "Fast", description: "Lorem ipsum dolor sit amet" },
+      { title: "Flexible", description: "Lorem ipsum dolor sit amet" },
+      { title: "Modern", description: "Lorem ipsum dolor sit amet" },
+    ],
+    link: { children: "Learn more", href: "/features" },
+  },
+  cardCta: {
+    title: "I'm Dan Spratling",
+    description:
+      "I help growing companies like yours convert more customers and make more sales by combining your goals with your user’s needs.",
+    link: { children: "Let's book a call", href: "/contact" },
+  },
+  testimonials: {
+    title: "Bringing a personal touch",
+    description:
+      "Building a great website is more than just knowing how to make things look pretty or writing clever code. I listen to your needs, ensuring you get a product you’re happy with. Listen to the great things others have said.",
+    testimonials: [
+      {
+        quote: "Lorem ipsum dolor sit amet",
+        author: "Eva Lettner",
+        company: "This Dot",
+      },
+      {
+        quote: "Lorem ipsum dolor sit amet",
+        author: "Dustin Goodman",
+        company: "Clickup",
+      },
+      {
+        quote:
+          "We’re very happy with the designs. Skyward Digital visited our offices and watched our staff using our internal application to see our pain points and deeply understand our domain and terminology, so they could deliver what we were aiming to achieve. We’re very happy with the value for money and the designs that we receive from Skyward Digital and there’s nothing we'd have them improve.",
+        author: "Terry Wells",
+        company: "Blackwood Group",
+      },
+      {
+        quote:
+          "The new website has been really good, and we have got an amazing response from everyone we talked to. This is exactly where we wanted to be and I'm very happy with the way it turned out, although we have a lot of great ideas for the future. We really appreciate your partnership and we'll be looking forward to working with you in 2023 and beyond.",
+        author: "Preetham Reddy",
+        company: "Tech Fabric",
+      },
+      {
+        quote:
+          "Dan's core strength is his ability to adapt and apply critical thinking to a problem. He doesn't just take a project and do it, he will break it down, check it ticks all the boxes (including the ones you forgot about!), and then deliver something beyond your expectations. Work with him without hesitation!",
+        author: "Chris Southam",
+        company: "The SaaS People",
+      },
+      {
+        quote:
+          "We loved working with Dan and appreciate all his contributions to Pigeon Loans. If anyone is in the market for hiring a great freelance front-end developer, don't hesitate to add Dan to your team.",
+        author: "Brian Bristol",
+        company: "Pigeon Loans",
+      },
+    ],
+  },
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title='Dan Spratling'>
+  <Hero title="Hey, I'm Dan 👋 Frontend engineer" />
+  <Logos
+    logos={[
+      { src: "/clients/Stripe.svg", alt: "Stripe" },
+      { src: "/clients/Prismic.svg", alt: "Prismic" },
+      { src: "/clients/Xero.png", alt: "Xero" },
+      { src: "/clients/Mailchimp.svg", alt: "Mailchimp" },
+      { src: "/clients/VisualComfort.svg", alt: "Visual Comfort" },
+      { src: "/clients/TechFabric.svg", alt: "Tech Fabric" },
+      { src: "/clients/Blackwood.svg", alt: "Blackwood Group" },
+      { src: "/clients/Pigeon.svg", alt: "Pigeon Loans" },
+    ]}
+  />
+  <!-- Image cards -->
+  <!-- About me -->
+  <!-- <Features title={content.features.title} features={content.features.features} link={content.features.link} />
+	<CardCta title={content.cardCta.title} description={content.cardCta.description} link={content.cardCta.link} />
+	<TestimonialGrid
+		title={content.testimonials.title}
+		description={content.testimonials.description}
+		testimonials={content.testimonials.testimonials}
+	/> -->
+</Layout>

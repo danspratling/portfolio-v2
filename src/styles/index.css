@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import './base/root.css';
+@import './base/typography.css';
+@import './base/article.css';
+@import './base/code.css';
+
+@import 'tailwindcss/components';
+@import './components/banner.css';
+@import './components/button.css';
+@import './components/form.css';
+
+@import 'tailwindcss/utilities';

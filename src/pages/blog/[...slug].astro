@@ -1,0 +1,67 @@
+---
+import Layout from "#/src/components/Layout.astro"
+import { getCollection, render } from "astro:content"
+import { Hero } from "#/src/components/Hero/Simple"
+// import { PageContents } from "#/src/components/PageContents"
+// import { RichText } from "#/ui/components/RichText"
+// import { default as BlogHero } from '#/ui/pageComponents/BlogHero';
+// import { SocialShare } from "#/src/components/Socials"
+// import { ArrowLeftIcon, ArrowRightIcon } from "@untitledui-icons/react/line"
+// import { Badge } from "#/ui/components/Badge"
+// import { Button } from "#/ui/components/Button"
+// import LeftSidebar from "../components/LeftSidebar/LeftSidebar.astro"
+import RightSidebar from "#/src/components/RightSidebar/RightSidebar.astro"
+// import { EDIT_URL } from "../consts"
+
+import type { MarkdownHeading } from "astro"
+import type { CollectionEntry } from "astro:content"
+import { SocialShare } from "#/src/components/Socials"
+
+// type Props = CollectionEntry<"blog">["data"] & {
+//   headings: MarkdownHeading[]
+//   next?: CollectionEntry<"blog">
+//   prev?: CollectionEntry<"blog">
+// }
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog"))
+    // .filter(post => (import.meta.env.PROD ? post.data.published !== false : false))
+    .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+
+  return posts.map((entry, index) => ({
+    params: { slug: entry.id },
+    props: {
+      ...entry.data,
+      body: entry.body,
+      entry,
+      next: posts[index + 1] || undefined,
+      prev: posts[index - 1] || undefined,
+    },
+  }))
+}
+
+const { entry, title, description, next, prev } = Astro.props
+const { Content, headings } = await render(entry)
+
+// const { title, description, client, links, headings, next, prev } = Astro.props
+---
+
+<Layout>
+  <Hero title={title} description={description} />
+  <main class='container relative flex justify-center gap-8 pb-12'>
+    <aside title='Site Navigation' class='hidden flex-col gap-6 lg:sticky lg:top-0 lg:flex lg:h-screen pt-6'>
+      <SocialShare />
+    </aside>
+    <div class='w-full max-w-3xl flex-1 pt-4'>
+      <article class='prose lg:prose-lg prose-invert max-w-none'>
+        <Content />
+      </article>
+    </div>
+    <aside
+      title='Table of Contents'
+      class='hidden w-56 xl:sticky xl:top-0 xl:-mr-6 xl:block xl:h-screen xl:overflow-y-auto xl:pb-12 xl:pr-6 pt-6'
+    >
+      <RightSidebar headings={headings} />
+    </aside>
+  </main>
+</Layout>
