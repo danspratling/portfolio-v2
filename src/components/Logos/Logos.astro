@@ -1,0 +1,89 @@
+---
+import type { ImgHTMLAttributes } from "react"
+import { cn } from "#/src/utils"
+import styles from "./Logos.module.css"
+
+import StripeLogo from "./clients/Stripe.svg"
+import PrismicLogo from "./clients/Prismic.svg"
+import MailchimpLogo from "./clients/Mailchimp.svg"
+import VCLogo from "./clients/VisualComfort.svg"
+import TechFabricLogo from "./clients/TechFabric.svg"
+import BlackwoodLogo from "./clients/Blackwood.svg"
+import PigeonLogo from "./clients/Pigeon.svg"
+import Xero from "./clients/XeroWhite.png"
+
+type LogosProps = {
+  logos: ImgHTMLAttributes<HTMLImageElement>[]
+}
+---
+
+<section class='bg-gray-950 py-24 sm:py-32'>
+  <div class='container mx-auto max-w-7xl px-6 lg:px-8'>
+    <div class='md:-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-4 nth-3:bg-white'>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <StripeLogo fill='inherit' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <PrismicLogo fill='inherit' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <img src={Xero.src} alt='Xero' width='40' height='40' class='opacity-90' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <MailchimpLogo fill='inherit' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <VCLogo fill='inherit' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <TechFabricLogo fill='inherit' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <BlackwoodLogo fill='inherit' />
+      </div>
+      <div
+        class={cn(
+          styles.logo,
+          "bg-gray-400/5 border border-gray-200/20 p-6 sm:p-10 fill-gray-200 flex justify-center items-center"
+        )}
+      >
+        <PigeonLogo fill='inherit' />
+      </div>
+    </div>
+  </div>
+</section>

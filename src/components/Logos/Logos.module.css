@@ -1,0 +1,6 @@
+.logo {
+  @apply first-of-type:rounded-tl-md;
+  @apply [&:nth-child(2)]:rounded-tr-md md:[&:nth-child(2)]:rounded-tr-none md:[&:nth-child(4)]:rounded-tr-md;
+  @apply [&:nth-last-child(2)]:rounded-bl-md md:[&:nth-last-child(2)]:rounded-bl-none md:[&:nth-last-child(4)]:rounded-bl-md;
+  @apply last-of-type:rounded-br-md;
+}

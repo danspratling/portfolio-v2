@@ -3,7 +3,7 @@ import { Hero } from "../components/Hero/Simple"
 import { Features } from "../components/Features"
 import { CardCta } from "../components/CardCta"
 import { TestimonialGrid } from "../components/Testimonials"
-import { Logos } from "../components/Logos"
+import Logos from "../components/Logos/Logos.astro"
 import Layout from "#/src/components/Layout.astro"
 
 // What I do
@@ -69,18 +69,7 @@ const content = {
 
 <Layout title='Dan Spratling'>
   <Hero title="Hey, I'm Dan 👋 Frontend engineer" />
-  <Logos
-    logos={[
-      { src: "/clients/Stripe.svg", alt: "Stripe" },
-      { src: "/clients/Prismic.svg", alt: "Prismic" },
-      { src: "/clients/Xero.png", alt: "Xero" },
-      { src: "/clients/Mailchimp.svg", alt: "Mailchimp" },
-      { src: "/clients/VisualComfort.svg", alt: "Visual Comfort" },
-      { src: "/clients/TechFabric.svg", alt: "Tech Fabric" },
-      { src: "/clients/Blackwood.svg", alt: "Blackwood Group" },
-      { src: "/clients/Pigeon.svg", alt: "Pigeon Loans" },
-    ]}
-  />
+  <Logos />
   <!-- Image cards -->
   <!-- About me -->
   <!-- <Features title={content.features.title} features={content.features.features} link={content.features.link} />

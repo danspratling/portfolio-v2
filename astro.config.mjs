@@ -8,5 +8,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  experimental: {
+    svg: true
+  },
   integrations: [react(), tailwind()]
 });
