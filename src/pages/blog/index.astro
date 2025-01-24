@@ -9,12 +9,12 @@ import { getCollection } from "astro:content"
 const blogPosts = (await getCollection("blog"))
   // .filter(post => (import.meta.env.PROD ? post.data.published !== false : false))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-const blogCardData = blogPosts.map(post => ({ ...post.data, slug: post.id }))
+const blogCardData = blogPosts.map((post) => ({ ...post.data, slug: post.id }))
 ---
 
 <Layout>
   <Hero
-    title='Blogs and Articles'
+    title="Blogs and Articles"
     description="A few of my thoughts about industry growth, personal development and how I've changed over the years"
   />
   <!-- {JSON.stringify(blogCardData)} -->

@@ -1,5 +1,3 @@
-
-
 body {
   @apply text-inverted font-[350];
 }
@@ -18,12 +16,12 @@ h6,
 h1 {
   @apply text-4xl;
 }
-@media (min-width: theme('screens.sm')) {
+@media (min-width: theme("screens.sm")) {
   h1 {
     @apply text-5xl;
   }
 }
-@media (min-width: theme('screens.md')) {
+@media (min-width: theme("screens.md")) {
   h1 {
     @apply text-6xl;
   }
@@ -32,12 +30,12 @@ h1 {
 h2 {
   @apply text-3xl;
 }
-@media (min-width: theme('screens.sm')) {
+@media (min-width: theme("screens.sm")) {
   h2 {
     @apply text-4xl;
   }
 }
-@media (min-width: theme('screens.md')) {
+@media (min-width: theme("screens.md")) {
   h2 {
     @apply text-5xl;
   }
@@ -46,7 +44,7 @@ h2 {
 h3 {
   @apply text-2xl;
 }
-@media (min-width: theme('screens.sm')) {
+@media (min-width: theme("screens.sm")) {
   h3 {
     @apply text-3xl;
   }
@@ -55,7 +53,7 @@ h3 {
 h4 {
   @apply text-xl;
 }
-@media (min-width: theme('screens.sm')) {
+@media (min-width: theme("screens.sm")) {
   h4 {
     @apply text-2xl;
   }

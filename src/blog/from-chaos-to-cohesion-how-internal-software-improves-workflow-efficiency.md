@@ -25,7 +25,7 @@ This type of software isn’t customer-facing — and with that comes a number o
 
 While it’s important to prioritise customer-facing solutions, neglecting internal software can cause problems further down the line. We’ve seen many cases where businesses have built internal software as a quick fix, leading to inefficient processes or outdated and limited systems that are difficult to scale. These challenges can stack up and hinder your team’s ability to work efficiently, increasing the time and cost of getting things done.
 
-Building internal software is an *investment* in your business. By tightening up your internal software solutions, you can improve workflows and positively impact business performance.
+Building internal software is an _investment_ in your business. By tightening up your internal software solutions, you can improve workflows and positively impact business performance.
 
 ## How internal software unlocks the full potential of your team
 

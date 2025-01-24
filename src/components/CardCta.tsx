@@ -1,7 +1,7 @@
 type CardCtaProps = {
   title: string
   description: string
-  link: JSX.IntrinsicElements['a']
+  link: JSX.IntrinsicElements["a"]
   image: any
 }
 
@@ -12,7 +12,7 @@ export const CardCta = ({ title, description, link, image }: CardCtaProps) => {
         <div className="bg-secondary rounded-lg w-full flex flex-1 flex-wrap md:flex-nowrap items-center overflow-hidden">
           <div
             className="relative h-full w-full text-secondary overflow-hidden"
-            style={{ maxWidth: '22rem' }}
+            style={{ maxWidth: "22rem" }}
           >
             <img {...image} className="w-full h-auto" />
           </div>

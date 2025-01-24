@@ -1,20 +1,20 @@
-code[class*='language-'],
-pre[class*='prismjs'] {
+code[class*="language-"],
+pre[class*="prismjs"] {
   @apply text-inverted-muted;
 }
 
-pre[class*='prismjs'],
-:not(pre) > code[class*='language-'] {
+pre[class*="prismjs"],
+:not(pre) > code[class*="language-"] {
   @apply bg-neutral-muted;
 }
 
 /* Code blocks */
-pre[class*='prismjs'] {
+pre[class*="prismjs"] {
   @apply py-4 px-6 my-8 overflow-auto rounded text-sm;
 }
 
 /* Inline code */
-:not(pre) > code[class*='language-'] {
+:not(pre) > code[class*="language-"] {
   @apply px-2 py-1 rounded whitespace-normal;
 }
 

@@ -19,7 +19,7 @@ export const ResourcesSection = ({
       <div className="text-center lg:max-w-4xl xl:max-w-5xl mx-auto my-20 xl:my-40 grid gap-6">
         <h2 className="text-3xl font-semibold">{title}</h2>
         {description && (
-          <p className="max-w-md mx-auto text-gray-400 tracking-wide">
+          <p className="max-w-md mx-auto text-gray-400 font-normal tracking-wide">
             {description}
           </p>
         )}

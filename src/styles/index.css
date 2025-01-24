@@ -1,12 +1,12 @@
-@import 'tailwindcss/base';
-@import './base/root.css';
-@import './base/typography.css';
-@import './base/article.css';
-@import './base/code.css';
+@import "tailwindcss/base";
+@import "./base/root.css";
+@import "./base/typography.css";
+@import "./base/article.css";
+@import "./base/code.css";
 
-@import 'tailwindcss/components';
+@import "tailwindcss/components";
 
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
 @font-face {
   font-family: "Geist";
@@ -19,7 +19,8 @@
 
 @font-face {
   font-family: "GeistMono";
-  src: url("/fonts/GeistMono/GeistMono[wght].woff2") format(woff2) tech(variations);
+  src: url("/fonts/GeistMono/GeistMono[wght].woff2") format(woff2)
+    tech(variations);
   font-weight: 50 1200;
   font-display: swap;
   font-style: normal;

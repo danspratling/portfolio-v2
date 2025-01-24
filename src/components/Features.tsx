@@ -1,7 +1,7 @@
 type FeaturesProps = {
   title: string
   features: FeatureProps[]
-  link?: JSX.IntrinsicElements['a']
+  link?: JSX.IntrinsicElements["a"]
 }
 
 export const Features = ({ title, features, link: link }: FeaturesProps) => {

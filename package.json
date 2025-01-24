@@ -9,8 +9,8 @@
     "astro": "astro",
     "format": "prettier --write . --plugin=prettier-plugin-astro",
     "format:check": "prettier --check . --plugin=prettier-plugin-astro",
-    "lint": "eslint --fix --ext .astro .",
-    "lint:check": "eslint --ext .astro .",
+    "lint": "eslint --fix \"src/**/*.{js,ts,tsx,astro}\"",
+    "lint:check": "eslint \"src/**/*.{js,ts,tsx,astro}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook"

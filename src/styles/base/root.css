@@ -10,6 +10,6 @@ img.__lazy {
   opacity: 0;
 }
 
-img[src]:not('__lazy') {
+img[src]:not("__lazy") {
   opacity: 1;
 }
