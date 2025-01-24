@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@untitledui-icons/react/solid"
-import { Badge } from "#/src/components/Badge"
+import { Badge } from "@/Badge"
 
 export type BlogCardProps = {
   title: string

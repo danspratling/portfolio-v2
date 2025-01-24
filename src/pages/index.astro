@@ -3,8 +3,9 @@ import { Hero } from "../components/Hero/Simple"
 import { Features } from "../components/Features"
 import { CardCta } from "../components/CardCta"
 import { TestimonialGrid } from "../components/Testimonials"
-import Logos from "../components/Logos/Logos.astro"
-import Layout from "#/src/components/Layout.astro"
+import Logos from "@/Logos/Logos.astro"
+import Layout from "@/Layout.astro"
+import { ResourcesSection } from "@/ResourcesSection"
 
 // What I do
 const content = {
@@ -70,6 +71,27 @@ const content = {
 <Layout title='Dan Spratling'>
   <Hero title="Hey, I'm Dan 👋 Frontend engineer" />
   <Logos />
+  <ResourcesSection
+    title="See what I've been working on"
+    description="Things I've been building, and how I've built it."
+    resources={[
+      {
+        title: "Toolbox",
+        description: "What I use to build the awesome projects I work on",
+        link: { title: "Unlock my toolbox", href: "/toolbox" },
+      },
+      {
+        title: "Blog",
+        description: "Learn about my thoughts on the state of web design and development",
+        link: { title: "Explore my blog", href: "/blog" },
+      },
+      {
+        title: "Resume",
+        description: "My past experience and what I can do for you.",
+        link: { title: "See my resume", href: "/resume" },
+      },
+    ]}
+  />
   <!-- Image cards -->
   <!-- About me -->
   <!-- <Features title={content.features.title} features={content.features.features} link={content.features.link} />
