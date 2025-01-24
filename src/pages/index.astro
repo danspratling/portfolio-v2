@@ -1,10 +1,11 @@
 ---
-import { Hero } from "../components/Hero/Simple"
 import { Features } from "../components/Features"
 import { CardCta } from "../components/CardCta"
-import { TestimonialGrid } from "../components/Testimonials"
-import Logos from "@/Logos/Logos.astro"
+
 import Layout from "@/Layout.astro"
+import Logos from "@/Logos/Logos.astro"
+import { Hero } from "../components/Hero/Simple"
+import { TestimonialGrid } from "@/TestimonialGrid"
 import { ResourcesSection } from "@/ResourcesSection"
 
 // What I do
@@ -30,47 +31,68 @@ const content = {
       "Building a great website is more than just knowing how to make things look pretty or writing clever code. I listen to your needs, ensuring you get a product you’re happy with. Listen to the great things others have said.",
     testimonials: [
       {
-        quote: "Lorem ipsum dolor sit amet",
-        author: "Eva Lettner",
-        company: "This Dot",
+        testimonial: "Lorem ipsum dolor sit amet",
+        author: {
+          name: "Eva Lettner",
+          role: "Engineering Manager",
+          company: "This Dot",
+          // avatar: "/images/eva-lettner.jpg",
+        },
       },
       {
-        quote: "Lorem ipsum dolor sit amet",
-        author: "Dustin Goodman",
-        company: "Clickup",
+        testimonial: "Lorem ipsum dolor sit amet",
+        author: {
+          name: "Dustin Goodman",
+          role: "Product Manager",
+          company: "Clickup",
+          // avatar: "/images/dustin-goodman.jpg",
+        },
       },
       {
-        quote:
+        testimonial:
           "We’re very happy with the designs. Skyward Digital visited our offices and watched our staff using our internal application to see our pain points and deeply understand our domain and terminology, so they could deliver what we were aiming to achieve. We’re very happy with the value for money and the designs that we receive from Skyward Digital and there’s nothing we'd have them improve.",
-        author: "Terry Wells",
-        company: "Blackwood Group",
+        author: { name: "Terry Wells", role: "CTO", company: "Blackwood Group" },
       },
       {
-        quote:
+        testimonial:
           "The new website has been really good, and we have got an amazing response from everyone we talked to. This is exactly where we wanted to be and I'm very happy with the way it turned out, although we have a lot of great ideas for the future. We really appreciate your partnership and we'll be looking forward to working with you in 2023 and beyond.",
-        author: "Preetham Reddy",
-        company: "Tech Fabric",
+        author: {
+          name: "Preetham Reddy",
+          role: "CEO/CTO",
+          company: "Tech Fabric",
+        },
       },
       {
-        quote:
+        testimonial:
           "Dan's core strength is his ability to adapt and apply critical thinking to a problem. He doesn't just take a project and do it, he will break it down, check it ticks all the boxes (including the ones you forgot about!), and then deliver something beyond your expectations. Work with him without hesitation!",
-        author: "Chris Southam",
-        company: "The SaaS People",
+        author: {
+          name: "Chris Southam",
+          role: "CTO",
+          company: "Signable",
+        },
       },
       {
-        quote:
+        testimonial:
           "We loved working with Dan and appreciate all his contributions to Pigeon Loans. If anyone is in the market for hiring a great freelance front-end developer, don't hesitate to add Dan to your team.",
-        author: "Brian Bristol",
-        company: "Pigeon Loans",
+        author: {
+          name: "Brian Bristol",
+          role: "CEO",
+          company: "Pigeon Loans",
+        },
       },
     ],
   },
 }
 ---
 
-<Layout title="Dan Spratling">
+<Layout title='Dan Spratling'>
   <Hero title="Hey, I'm Dan 👋 Frontend engineer" />
   <Logos />
+  <TestimonialGrid
+    title={content.testimonials.title}
+    description={content.testimonials.description}
+    testimonials={content.testimonials.testimonials}
+  />
   <ResourcesSection
     title="See what I've been working on"
     description="Things I've been building, and how I've built it."
@@ -82,8 +104,7 @@ const content = {
       },
       {
         title: "Blog",
-        description:
-          "Learn about my thoughts on the state of web design and development",
+        description: "Learn about my thoughts on the state of web design and development",
         link: { title: "Explore my blog", href: "/blog" },
       },
       {
@@ -97,9 +118,5 @@ const content = {
   <!-- About me -->
   <!-- <Features title={content.features.title} features={content.features.features} link={content.features.link} />
 	<CardCta title={content.cardCta.title} description={content.cardCta.description} link={content.cardCta.link} />
-	<TestimonialGrid
-		title={content.testimonials.title}
-		description={content.testimonials.description}
-		testimonials={content.testimonials.testimonials}
-	/> -->
+	-->
 </Layout>
