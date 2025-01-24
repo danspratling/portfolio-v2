@@ -13,7 +13,7 @@ export type TestimonialProps = {
 export const TestimonialCard = ({ testimonial, author }: TestimonialProps) => {
   return (
     <div className="grid gap-2 py-8 px-6 bg-gray-950 rounded-lg border border-white/20 border-dashed cursor-pointer hover:no-underline">
-      <p className="text-white font-normaltext-left">{testimonial}</p>
+      <p className="text-gray-200 font-normal text-left">{testimonial}</p>
       <div className="flex items-center justify-start gap-2 mt-2">
         <Avatar {...author.avatar} />
         <div className="text-left">

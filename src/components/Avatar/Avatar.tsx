@@ -40,7 +40,7 @@ export const Avatar = ({
   return (
     <div
       className={cn(
-        "flex items-center gap-3 rounded-full overflow-hidden text-gray-800 bg-gray-300 dark:bg-gray-700 dark:text-gray-200",
+        "flex flex-shrink-0 items-center gap-3 rounded-full overflow-hidden text-gray-800 bg-gray-300 dark:bg-gray-700 dark:text-gray-200",
         className
       )}
       style={{ width: imageSize, height: imageSize }}
