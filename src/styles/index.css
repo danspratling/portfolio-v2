@@ -10,3 +10,21 @@
 @import './components/form.css';
 
 @import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist/Geist[wght].woff2") format(woff2) tech(variations);
+  font-weight: 50 1200;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+}
+
+@font-face {
+  font-family: "GeistMono";
+  src: url("/fonts/GeistMono/GeistMono[wght].woff2") format(woff2) tech(variations);
+  font-weight: 50 1200;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+}

@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors")
+import { fontFamily } from "tailwindcss/defaultTheme"
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -10,6 +11,20 @@ export default {
       padding: "1rem",
     },
     extend: {
+      fontFamily: {
+        sans: [
+          `Geist, ${fontFamily.sans}`,
+          {
+            fontVariationSettings: '"wght" 80',
+          },
+        ],
+        mono: [
+          `GeistMono, ${fontFamily.mono}`,
+          {
+            fontVariationSettings: '"wght" 80',
+          },
+        ],
+      },
       screens: {
         "2xl": "1280px",
       },
@@ -113,5 +128,8 @@ export default {
       "focus-within",
     ],
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("./src/plugins/fontVariationSettings"),
+  ],
 }
