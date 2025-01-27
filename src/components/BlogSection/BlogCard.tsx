@@ -40,7 +40,7 @@ export const BlogCard = ({
           <h3 className="font-medium">{title}</h3>
           <ArrowRightIcon className="w-6 h-6 flex-shrink-0" />
         </div>
-        <p className="text-gray-400 font-light">{description}</p>
+        <p className="text-gray-400">{description}</p>
       </a>
       {/* {tags?.length > 0 && (
         <div className="flex flex-wrap gap-2">

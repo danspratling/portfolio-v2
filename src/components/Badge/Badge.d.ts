@@ -1,4 +1,4 @@
-import type { ImageProps } from "#/ui/components/Image"
+import type { ImageProps } from "@/Image"
 
 export type BadgeProps = {
   variant?: "rounded" | "pill" | "square"

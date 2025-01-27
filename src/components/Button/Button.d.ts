@@ -1,5 +1,5 @@
 export type ButtonBaseProps = {
-  variant?: "primary" | "outline" | "ghost" | "text"
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "text"
   size?: "xs" | "sm" | "md" | "lg" | "xl"
   destructive?: boolean
 }

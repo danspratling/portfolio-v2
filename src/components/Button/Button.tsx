@@ -15,17 +15,17 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const classes = cn(
-    "rounded h-fit tracking-normal relative outline-offset-0 outline-4 outline-none transition-all duration-200 no-underline inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-semibold ease-in-out disabled:pointer-events-none [&>*]:inline-flex [&>*]:items-center focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-transparent hover:no-underline",
+    "rounded-sm h-fit tracking-normal relative outline-offset-1 outline-2 outline-none transition-all duration-200 no-underline inline-flex items-center justify-center overflow-hidden whitespace-nowrap font-medium ease-in-out disabled:pointer-events-none [&>*]:inline-flex [&>*]:items-center focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-transparent hover:no-underline",
 
     // variants
     variant === "primary" &&
-      "border border-slate-950 bg-slate-950 hover:bg-opacity-95 hover:outline-sky-300/50 text-white",
+      "bg-yellow-400 hover:bg-opacity-95 hover:outline-yellow-400/40 text-gray-950",
+    variant === "secondary" && "bg-gray-900 hover:bg-gray-900/70 text-gray-200",
     variant === "outline" &&
-      "border border-gray-400 text-gray-700 hover:text-gray-950",
-    variant === "ghost" &&
-      "border border-transparent text-gray-700 hover:text-gray-950 hover:bg-gray-400/20",
+      "border border-gray-600 text-gray-200 hover:bg-gray-800/60",
+    variant === "ghost" && "text-gray-200 hover:bg-gray-800/60",
     variant === "text" &&
-      "border border-transparent justify-start text-gray-900 underline-offset-2 hover:underline focus:underline",
+      "justify-start text-gray-900 underline-offset-2 hover:underline focus:underline",
 
     // destructive - overrides variant colours but keeps the rest of the variant styles
     destructive &&

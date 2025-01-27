@@ -5,7 +5,7 @@ import { glob } from "astro/loaders"
 // Define a `type` and `schema` for each collection
 const blog = defineCollection({
   // Load all posts except ones that start with an underscore, which is used for templates
-  loader: glob({ pattern: ["*.md", "!_*"], base: "src/blog" }),
+  loader: glob({ pattern: ["*.md", "!_*"], base: "content/blog" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -18,7 +18,18 @@ const blog = defineCollection({
   }),
 })
 
+const testimonials = defineCollection({
+  loader: glob({ pattern: ["*.md"], base: "content/testimonials" }),
+  schema: z.object({
+    name: z.string(),
+    role: z.string(),
+    company: z.string(),
+    avatar: z.string().optional(),
+  }),
+})
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   blog,
+  testimonials,
 }
