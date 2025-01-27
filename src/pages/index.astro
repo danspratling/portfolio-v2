@@ -3,7 +3,7 @@ import { getCollection, render } from "astro:content"
 
 import Layout from "@/Layout.astro"
 import Logos from "@/Logos/Logos.astro"
-import { Hero } from "../components/Hero/Simple"
+import { Hero } from "../components/Hero/Text"
 import { ProjectShowcase } from "@/ProjectShowcase"
 import { TestimonialGrid } from "@/TestimonialGrid"
 import { ContactForm } from "@/ContactForm"
@@ -16,12 +16,17 @@ const testimonials = (await getCollection("testimonials")).map(testimonial => ({
 ---
 
 <Layout title='Dan Spratling'>
-  <Hero title="Hey, I'm Dan 👋 Frontend engineer" />
-  <Logos />
+  <Hero
+    client:load
+    title="Hey, I'm Dan"
+    description='A Senior Design Engineer building outstanding user experiences for companies across the world.'
+    status="I'm currently looking for my next challenge"
+  />
+  <!-- About me -->
+  <Logos title="I've worked with some amazing teams" />
   <ProjectShowcase
-    title='Building first-class digital experiences'
+    title='I build first-class digital experiences'
     description='From design to development, startup to enterprise, I build things that look good, feel great and perform exceptionally.'
-    link={{ href: "/projects", children: "See projects" }}
   />
   <TestimonialGrid
     title='What is it like working with me?'
@@ -55,7 +60,6 @@ const testimonials = (await getCollection("testimonials")).map(testimonial => ({
     ]}
   />
 
-  <!-- Image cards -->
   <!-- About me -->
   <!-- <Features title={content.features.title} features={content.features.features} link={content.features.link} />
 	<CardCta title={content.cardCta.title} description={content.cardCta.description} link={content.cardCta.link} />

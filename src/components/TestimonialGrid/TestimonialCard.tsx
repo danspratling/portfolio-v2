@@ -12,7 +12,7 @@ export type TestimonialProps = {
 
 export const TestimonialCard = ({ testimonial, author }: TestimonialProps) => {
   return (
-    <div className="grid gap-2 py-8 px-6 bg-gray-950 rounded-lg border border-white/20 border-dashed cursor-pointer hover:no-underline">
+    <div className="grid gap-2 p-6 bg-gray-950 rounded-lg border border-white/20 border-dashed cursor-pointer hover:no-underline">
       <p className="text-gray-200 font-normal text-left text-sm">
         {testimonial}
       </p>
