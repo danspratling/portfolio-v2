@@ -6,6 +6,7 @@ import Logos from "@/Logos/Logos.astro"
 import { Hero } from "../components/Hero/Simple"
 import { ProjectShowcase } from "@/ProjectShowcase"
 import { TestimonialGrid } from "@/TestimonialGrid"
+import { ContactForm } from "@/ContactForm"
 import { ResourcesSection } from "@/ResourcesSection"
 
 const testimonials = (await getCollection("testimonials")).map(testimonial => ({
@@ -23,9 +24,14 @@ const testimonials = (await getCollection("testimonials")).map(testimonial => ({
     link={{ href: "/projects", children: "See projects" }}
   />
   <TestimonialGrid
-    title={content.testimonials.title}
-    description={content.testimonials.description}
-    testimonials={content.testimonials.testimonials}
+    title='What is it like working with me?'
+    description="I've had the pleasure of working with some amazing companies and individuals. Here's what they have to say about me."
+    testimonials={testimonials}
+  />
+  <ContactForm
+    client:load
+    title="Let's work together"
+    description="Have a project you'd like to discuss? I'd love to hear from you."
   />
   <ResourcesSection
     title="See what I've been working on"
